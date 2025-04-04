@@ -1,0 +1,368 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #806f6f; 
+    background-size: cover;
+    background-position: center; 
+}
+
+h4{
+    font-size: larger;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+h5{
+    font-size: larger;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+/* Chat container */
+
+.chatbox-container {
+    position: fixed;
+    bottom: 20px; /* Adjust as needed */
+    right: 20px;  /* Adjust as needed */
+    width: 350px;
+    height: 500px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    display: none; /* Initially hidden */
+    flex-direction: column;
+    overflow: hidden;
+    margin: 0;
+    z-index: 1000;
+}
+
+/* Chat header */
+.chat-header {
+    background: #007bff;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Chat box (messages area) */
+.chat-box {
+    flex: 1;
+    padding: 10px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Message bubbles */
+.message {
+    max-width: 75%;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.user-message {
+    background: #007bff;
+    color: white;
+    align-self: flex-end;
+    border-bottom-right-radius: 2px;
+}
+
+.bot-message {
+    background: #e0e0e0;
+    color: black;
+    align-self: flex-start;
+    border-bottom-left-radius: 2px;
+}
+
+/* Input box */
+.input-box {
+    display: flex;
+    border-top: 1px solid #ddd;
+    padding: 10px;
+    background: #fff;
+}
+
+input {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+}
+#open-chat {
+    position: fixed; /* Make the button fixed relative to the viewport */
+    bottom: 20px;    /* Position it 20 pixels from the bottom of the screen */
+    right: 20px;     /* Position it 20 pixels from the right of the screen */
+    /* Add any other styling you have for the button */
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    z-index: 1000; /* Ensure it appears above other content */
+}
+
+button {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #0056b3;
+}
+
+/* Avatar images */
+.avatar {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 8px;
+}
+
+
+h3{
+    font-size: x-large;
+    font-family: cursive;
+    color: #4d076d;
+}
+
+.top-bar {
+    display: flex;
+    text-align: center;
+    font-family: Tahoma, Geneva, Verdana, sans-serif;
+    color: #050505;
+}
+
+.top-bar img {
+    width: 100px; 
+    height: auto;
+    margin-right: 10px; 
+}
+
+.top-bar h1 {
+    font-size: 50px; 
+}
+
+.search-bar {
+    float: right;
+    margin-right: 20px;
+}
+
+.search-bar input[type="text"] {
+    width: 300px;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.search-bar button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #259b29;
+    color: white;
+    border: none;
+}
+
+.search-bar button:hover {
+    background-color: #45a049;
+}
+
+.destination-card {
+    display: flex;
+    flex-direction: column;
+    width: calc(25% - 20px);
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #f9f9f9;
+    transition: transform 0.3s ease;
+}
+
+#userWelcome {
+    font-weight:bolder;
+    font-size: xx-large;
+    color: #0e0c0f;
+    margin-top: 10px;
+    font-family:cursive;
+    text-align: center; 
+}
+
+.destination-card:hover {
+    transform: scale(1.05);
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.popup-content {
+    background-color: #fefefe;
+    margin: 20% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 40%;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: rgb(235, 239, 252);
+    font-size: large;
+    font-weight: bolder;
+}
+
+nav ul {
+    list-style-type: none;   
+}
+
+nav ul li {
+    display: inline;
+    margin-left: 20px;
+}
+
+nav ul li.account:hover .submenu {
+    display: block;
+}
+
+nav ul li.account .submenu {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    padding: 10px;
+}
+
+nav ul li.account .submenu li {
+    margin: 5px 0;
+}
+
+.slider {
+    height: 400px; 
+    width: 800px;
+    background-size: cover;
+    background-position: center;
+    margin: 0 auto; 
+    border: 2px solid #fb9e3b;
+}
+
+.slider-nav {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    margin: 0 5px;
+    border-radius: 50%;
+    border: 2px solid #ddd;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.dot.active {
+    background-color: #ddd;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.featured-destinations {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.sevenwonders {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.visited {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.destination-card {
+    display: flex;
+    flex-direction: column;
+    width: calc(25% - 20px);
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #f9f9f9;
+}
+
+.image-container {
+    flex: 1;
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+}
+
+.details-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.details-container h2 {
+    margin-bottom: 10px;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-nav ul {
+    list-style-type: none;
+}
+
+.footer-nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+.footer-nav ul li a {
+    text-decoration: none;
+}

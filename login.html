@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="login.css">
+    <title>Login Page</title>
+</head>
+<body>
+    <div class="container">
+        <div class="left-side">
+            <div class="welcomeline">
+                <img src="https://images.wallpaperscraft.com/image/single/girl_travel_camping_166108_300x188.jpg" alt="">
+                <p>Welcome to Destination of Destiny</p>
+            </div>
+            <div class="additional-images">
+                <div class="image-row">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTS6uyzXQOUv8nSbnzHlSC0zdRGqgM0w9_PY9xNhlc9PhcOFSffDagmMeg&s" alt="Additional Image 1">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDAQmzG9L1vNwwjk-ObTkfDwE_oUBSSByO8g&s" alt="Additional Image 2">
+                </div>
+                <div class="image-row">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQAJdF0ahtBmTRbx5UkgGHtEhVvFmEIeOfZOA&s" alt="Additional Image 3">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQua9AorAZ1J83JxE6_zlPzd-HBQFo64I2GBA&s" alt="Additional Image 4">
+                </div>
+            </div>
+        </div>
+        <div class="login-form">
+            <h2>Login</h2>
+            <div class="input-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <button type="button" onclick="loginUser ()">Login</button>
+        </div>
+    </div>
+    <script>
+        function loginUser () {
+            var username = document.getElementById("username").value; 
+            var password = document.getElementById("password").value;
+
+            if (username && password) { 
+                localStorage.setItem("username", username);
+                window.location.href = "web.html"; 
+                return false;
+            } else {
+                alert("Please enter both username and password.");
+                return false;
+            }
+        }
+    </script> 
+</body>
+</html>

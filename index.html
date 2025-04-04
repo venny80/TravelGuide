@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Website</title>
+    <link rel="stylesheet" href="web.css">
+    <script src="web.js"></script>
+</head>
+<body>
+    
+    <div class="top-bar">
+        <img src="https://i.pinimg.com/736x/a9/e8/b3/a9e8b367f144e9581114b65f4e560427.jpg" alt="Travel Website Logo">
+        <h1>Destination of Destiny </h1>
+       
+    </div>
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Destinations</a></li>
+            <li><a href="#">Reviews</a></li>
+            <li><a href="#">About Us</a>
+                <li class="portfolio">
+                <a href="info.html">portfolio</a>
+                </li>
+            </li>
+            <li><a href="#">Contact Us</a></li>
+            <li class="account">
+                <a href="login.html">Account</a>
+
+            </li>
+        </ul>
+    </nav>
+    <div id="userWelcome"></div>
+    <div class="slider">
+        
+    </div>
+    <div class="slider-nav">
+        <button class="dot" onclick="showSlide(0)"></button>
+        <button class="dot" onclick="showSlide(1)"></button>
+        <button class="dot" onclick="showSlide(2)"></button>
+        <button class="dot" onclick="showSlide(3)"></button>
+    </div>
+    
+    <div class="search-bar">
+        <input type="text" id="searchInput" placeholder="Search for destinations by category...">
+        <button onclick="searchDestinations()">Search</button>
+    </div>
+    <main>
+        <h4> There are many destinations yet waiting for you to visit them </h4>
+        <h5> Reach out to the every corner </h5>
+        <section class="featured-destinations"></section>
+   
+     
+    </main>
+    
+        <button id="open-chat" onclick="openChat()">Open Chat</button>
+    <div class="chatbox-container" style="display: none;">
+        <div id="chatbox-content"></div>
+        <input type="text" id="user-message" placeholder="Type a message...">
+        <button onclick="sendMessage()">Send</button>
+        <button onclick="closeChat()">Close Chat</button>
+    </div>
+
+
+    <footer>
+        <div class="footer-nav">
+            <ul>
+                <li><a href="#">Terms of Service</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+            </ul>
+        </div>
+        <div class="social-media">
+            <a href="#"><img src="facebook-icon.png" alt="Facebook"></a>
+            <a href="#"><img src="twitter-icon.png" alt="Twitter"></a>
+            <a href="#"><img src="instagram-icon.png" alt="Instagram"></a>
+        </div>
+        <div class="contact-info">
+            <p>Email: info@destinationofdestiny.com</p>
+            <p>Phone: +1 (123) 456-7890</p>
+        </div>
+    </footer>
+    
+    
+</body>
+</html>
